@@ -63,9 +63,7 @@
           <h1 class="section-order-title">
             Effective Solutions for Your Business
           </h1>
-          <button id="modal-open-btn" type="submit" class="button-order">
-            Order Service
-          </button>
+          <button type="button" class="button-order">Order Service</button>
         </div>
       </section>
       <!-- Section-advantages -->
@@ -491,10 +489,10 @@
     </footer>
 
     <!-- Modal window  Section-order-->
-    <div id="modal-order" class="modal">
-      <div class="modal-container">
-        <button id="modal-close-order-btn" class="modal-close" type="button">
-          <svg class="modal-close-icon" width="24" height="24">
+    <div class="backdrop is-open">
+      <div class="modal">
+        <button class="modal-close" type="button">
+          <svg class="modal-close-icon" width="8" height="8">
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
@@ -506,10 +504,11 @@
             <label class="modal-form-label" for="user-name"> Name </label>
             <div class="modal-container-input">
               <input
-                class="modal-form-input"
+                class="modal-input"
                 id="user-name"
                 type="text"
                 name="user-name"
+                required
               />
               <svg class="modal-form-input-icon" width="18" height="18">
                 <use href="./images/icons.svg#icon-person"></use>
@@ -520,10 +519,11 @@
             <label class="modal-form-label" for="phone-number"> Phone </label>
             <div class="modal-container-input">
               <input
-                class="modal-form-input"
+                class="modal-input"
                 id="phone-number"
                 type="text"
                 name="phone-number"
+                required
               />
               <svg class="modal-form-input-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-phone"></use>
@@ -534,10 +534,11 @@
             <label class="modal-form-label" for="email"> Email </label>
             <div class="modal-container-input">
               <input
-                class="modal-form-input"
+                class="modal-input"
                 id="email"
                 type="text"
                 name="email"
+                required
               />
               <svg class="modal-form-input-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-email"></use>
@@ -550,7 +551,6 @@
               id="user-comment"
               class="modal-form-textarea"
               name="user-comment"
-              rows="7"
               placeholder="Text input"
             ></textarea>
           </div>
@@ -564,7 +564,7 @@
             />
             <label class="modal-form-policy" for="user-privacy">
               <span class="modal-form-policy-priv">
-                <svg class="checkbox-icon" width="16" height="16">
+                <svg class="checkbox-icon" width="8" height="8">
                   <use href="./images/icons.svg#icon-checkbox"></use>
                 </svg>
               </span>
