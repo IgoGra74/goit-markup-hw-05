@@ -602,7 +602,6 @@ img {
 }
 
 .subscribe-icon {
-    margin-left: 16px;
     fill: #FFFFFF;
 }
 
@@ -611,12 +610,21 @@ img {
 .backdrop {
     position: fixed;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     top: 0;
     left: 0;
     background-color: #2e2f4266;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
         visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .modal {
@@ -660,7 +668,7 @@ img {
 
 .modal-close:hover .modal-close-icon,
 .modal-close:focus .modal-close-icon {
-    fill: #ffffff;
+    fill: #FFFFFF;
 }
 
 .modal-close-icon {
@@ -709,6 +717,7 @@ img {
     position: absolute;
     top: 50%;
     left: 16px;
+    fill: #2E2F42;
     transform: translateY(-50%);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -761,14 +770,14 @@ img {
     height: 16px;
     border: 1px solid #2e2f4266;
     border-radius: 2px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: inline-flex;
     justify-content: center;
     align-items: center;
     fill: transparent;
     margin-right: 8px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+        fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 input[type="checkbox"]:checked+label>span {
